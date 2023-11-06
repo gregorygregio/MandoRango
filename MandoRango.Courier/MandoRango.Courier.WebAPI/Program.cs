@@ -61,7 +61,7 @@ app.MapPost("/CourierPosition", (CourierPosition position) =>
     var body = Encoding.UTF8.GetBytes(message);
 
     channel.BasicPublish(exchange: string.Empty,
-                         routingKey: "position",
+                         routingKey: courierPositionQueueName,
                          basicProperties: null,
                          body: body);
 
