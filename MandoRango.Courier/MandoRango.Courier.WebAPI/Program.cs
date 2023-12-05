@@ -1,6 +1,6 @@
 using System.Text;
 using System.Text.Json;
-using Microsoft.AspNetCore.Http;
+using MandoRango.Courier.Models;
 using RabbitMQ.Client;
 
 
@@ -71,8 +71,3 @@ app.MapPost("/CourierPosition", (CourierPosition position) =>
 
 app.Run();
 
-
-
-internal record struct CourierPosition(Guid CourierId, double Latitude, double Longitude)
-{
-}
