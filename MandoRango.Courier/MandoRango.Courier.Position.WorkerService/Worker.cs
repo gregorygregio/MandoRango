@@ -47,15 +47,10 @@ namespace MandoRango.Courier.Position.WorkerService
                     var message = Encoding.UTF8.GetString(body);
                     var position = JsonSerializer.Deserialize<CourierPosition>(message);
 
-                    await new CourierPositionRepository(
+                    await new CourierRepository(
                         courierMongoDbConfig.GetValue<string>("ConnectionString"),
                         courierMongoDbConfig.GetValue<string>("DatabaseName")
-                        ).CreateAsync(new CourierPositionBson()
-                    {
-                        CourierId = position.CourierId,
-                        Latitude = position.Latitude,
-                        Longitude = position.Longitude
-                    });
+                        ).UpdateCourierPositionAsync(position);
                     _logger.LogInformation("Received {message} at {time}", message, DateTimeOffset.Now);
                 }
                 catch(Exception ex)
