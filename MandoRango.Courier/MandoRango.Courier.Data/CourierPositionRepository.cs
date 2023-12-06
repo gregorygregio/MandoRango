@@ -29,7 +29,9 @@ namespace MandoRango.Courier.Data
 
             var update = Builders<CourierPositionBson>.Update
                 .Set(pos => pos.Latitude, position.Latitude)
-                .Set(pos => pos.Longitude, position.Longitude);
+                .Set(pos => pos.Longitude, position.Longitude)
+                .Set(pos => pos.PositionTimeStamp, DateTime.Now)
+                ;
 
             await _courierPositionCollection.UpdateOneAsync(filter, update, new UpdateOptions()
             {
@@ -47,5 +49,6 @@ namespace MandoRango.Courier.Data
         public Guid CourierId {get;set;}
         public double Latitude { get; set; }
         public double Longitude { get; set; }
+        public DateTime PositionTimeStamp { get; set; }
     }
 }
