@@ -1,0 +1,16 @@
+# Download docker image
+> docker pull mongodb/mongodb-community-server
+
+# Run container
+> docker run --name mongo -d mongodb/mongodb-community-server:latest -p 27017:27017
+
+# Check container
+> docker container ls
+
+# Run mongo shell
+> docker exec -it mongo mongosh
+
+
+
+# To stop
+> docker stop mongo

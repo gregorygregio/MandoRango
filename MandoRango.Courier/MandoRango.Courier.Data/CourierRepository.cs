@@ -33,5 +33,18 @@ namespace MandoRango.Courier.Data
                 IsUpsert = true
             });
         }
+
+        public async Task<List<MandoRango.Courier.Models.Courier>> GetAvailableCouriersByCity(int cityId)
+        {
+
+            var filter = Builders<CourierBson>.Filter
+                .ElemMatch(pos => pos.ActuationCities, cId => cId == cityId);
+
+            var search = await _courierCollection.FindAsync(filter);
+            var result = await search.ToListAsync();
+
+            return result.Select(x => (MandoRango.Courier.Models.Courier)x).ToList();
+
+        }
     }
 }

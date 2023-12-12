@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MandoRango.Courier.WebAPI",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MandoRango.Courier.Position.WorkerService", "MandoRango.Courier.Position.WorkerService\MandoRango.Courier.Position.WorkerService.csproj", "{A836F52A-BBBC-4F64-8E30-88690055573E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandoRango.Courier.Models", "MandoRango.Courier.Models\MandoRango.Courier.Models.csproj", "{90FF09E6-302F-42F9-82E5-5794B3EA9180}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MandoRango.Courier.Models", "MandoRango.Courier.Models\MandoRango.Courier.Models.csproj", "{90FF09E6-302F-42F9-82E5-5794B3EA9180}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandoRango.Courier.Data", "MandoRango.Courier.Data\MandoRango.Courier.Data.csproj", "{0068689B-CFD5-49B2-BEB0-8198202D97E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MandoRango.Courier.Data", "MandoRango.Courier.Data\MandoRango.Courier.Data.csproj", "{0068689B-CFD5-49B2-BEB0-8198202D97E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandoRango.Courier.Services", "MandoRango.Courier.Services\MandoRango.Courier.Services.csproj", "{827F3008-0A85-4E67-BA92-0959BD909572}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{0068689B-CFD5-49B2-BEB0-8198202D97E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0068689B-CFD5-49B2-BEB0-8198202D97E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0068689B-CFD5-49B2-BEB0-8198202D97E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{827F3008-0A85-4E67-BA92-0959BD909572}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{827F3008-0A85-4E67-BA92-0959BD909572}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{827F3008-0A85-4E67-BA92-0959BD909572}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{827F3008-0A85-4E67-BA92-0959BD909572}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
